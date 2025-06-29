@@ -74,6 +74,22 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        excludes: [
+          '/404.html', '/en/404.html', '/ru/404.html', '/404/', '/en/404/', '/ru/404/', '/en/dev-404-page/', '/ru/dev-404-page/'
+        ],
+        resolveSiteUrl: () => `https://wisotskiy.cz`,
+        serialize: ({ path, pageContext }) => {
+          return {
+            url: `https://wisotskiy.cz${path}`,
+            lastmod: pageContext?.modifiedTime,
+          }
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Kameraman a fotograf Jaroslav Vysockyj`,

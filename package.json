@@ -31,7 +31,8 @@
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.17.4",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "ajv": "^6.12.6"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
